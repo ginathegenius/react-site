@@ -6,6 +6,8 @@ import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { LinkContainer } from "react-router-bootstrap";
 import Footer from "./components/Footer";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   return (
@@ -16,7 +18,13 @@ function App() {
             Gina Bueno
           </Navbar.Brand>
         </LinkContainer>
-        <Navbar.Toggle />
+        <Navbar.Toggle aria-controls="basic-navbar-nav">
+          <span>
+            <FontAwesomeIcon
+              icon={faBars} color="#FFFFFF" 
+            />
+          </span>
+        </Navbar.Toggle>
         <Navbar.Collapse className="justify-content-end">
           <Nav className="mr-auto" activeKey={window.location.pathname}>
             <NavDropdown title="Guides">
