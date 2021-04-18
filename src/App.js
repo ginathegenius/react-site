@@ -19,14 +19,12 @@ function App() {
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           <Nav className="mr-auto" activeKey={window.location.pathname}>
-            {/* <LinkContainer to="/about">
-              <Nav.Link>About</Nav.Link>
-            </LinkContainer>
-            <LinkContainer to="/blog">
-              <Nav.Link>Blogs</Nav.Link>
-            </LinkContainer> */}
             <NavDropdown title="Guides">
-              <NavDropdown.Item href="seacoast">Seacoast</NavDropdown.Item>
+              <NavDropdown.Item>
+              <LinkContainer to="/seacoast">
+              <Nav.Link>Seacoast</Nav.Link>
+            </LinkContainer>
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
